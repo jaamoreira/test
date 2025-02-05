@@ -1,0 +1,27 @@
+<!-- Hero(extended) navbar -->
+<div class="navbar" [ngClass]="{'navbar--extended': headerLocation ==='home'}" *ngIf="reloadNavbar">
+    <nav class="nav__mobile"></nav>
+    <div class="container">
+        <div class="navbar__inner w-100">
+            <a href="index.html" class="navbar__logo"><img src="../../assets/massil_logo.png" /></a>
+            <nav class="navbar__menu">
+                <ul>
+                    <li><a class="text-decoration-none" routerLink="/inicio">INICIO</a></li>
+                    <li><a class="text-decoration-none" routerLink="/sobre">SOBRE</a></li>
+                    <li class="dropdown">
+                        <a class="text-decoration-none" routerLink="/produtos">PRODUTOS</a>
+                        <!-- <a class="text-decoration-none">PRODUTOS <i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#" style="color:black;">Carregaores</a>
+                            <a href="#" style="color:black;">Cisternas</a>
+                            <a href="#" style="color:black;">Alfaias</a>
+                        </div> -->
+                    </li>
+                    <li><a class="text-decoration-none" routerLink="/galeria">GALERIA</a></li>
+                    <li><a class="text-decoration-none" routerLink="/contactos">CONTACTOS</a></li>
+                </ul>
+            </nav>
+            <div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+        </div>
+    </div>
+</div>

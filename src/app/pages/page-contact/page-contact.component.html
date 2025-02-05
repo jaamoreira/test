@@ -1,0 +1,113 @@
+<div class="page contact-page">
+    <h2 class="text-center">Contactos</h2>
+    <hr class="page-divider">
+
+    <div class="col-12 contact-content">
+        <div class="col-md-8 col-sm-12 p-0">
+            <div class="contact-map">
+                <iframe width="100%" height="500" src="https://maps.google.com/maps?q=massil&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12 contact-border">
+            <div class="contact-box">
+                <div class="row mt-4 justify-content-center">
+                    <div class="contact-information">
+                        <img src="/assets/img/phone.svg" alt="" class="contact-icon">
+                        <span class="contact-information-title">Telemóvel</span>
+                    </div>
+                    <p class="contact-information-subtitle">(+351) 252 951 399</p>
+                </div>
+                <div class="row mt-4 justify-content-center">
+                    <div class="contact-information">
+                        <img src="/assets/img/fax.svg" alt="" class="contact-icon">
+                        <span class="contact-information-title">Fax</span>
+                    </div>
+                    <p class="contact-information-subtitle">(+351) 252 951 399</p>
+                </div>
+                <div class="row mt-4 justify-content-center">
+                    <div class="contact-information">
+                        <img src="/assets/img/envelope.svg" alt="" class="contact-icon">
+                        <span class="contact-information-title">Geral</span>
+                    </div>
+                    <p class="contact-information-subtitle">
+                        <a href="mailto:massil@massil.pt">massil@massil.pt</a>
+                    </p>
+                </div>
+                <div class="row mt-4 justify-content-center">
+                    <div class="contact-information">
+                        <img src="/assets/img/envelope.svg" alt="" class="contact-icon">
+                        <span class="contact-information-title">Dep. Comercial</span>
+                    </div>
+                    <p class="contact-information-subtitle">
+                        <a href="mailto:dep.comercial@massil.pt">dep.comercial@massil.pt</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container contact-margin">
+        <div class="col-12 d-flex flex-wrap">
+            <div class="col-md-1 col-sm-0"></div>
+            <div class="col-md-10 col-sm-12 contact-form-box">
+                    <div class="col-md-2 col-sm-0"></div>
+                    <div class="col-md-8 col-sm-12">
+                        <h2 class="text-center mt-2">Fale connosco</h2>
+                        <hr class="contact-divider">
+                        <form [formGroup]="contactForm" class="contact-form mt-5">
+                            <div class="col-6 pr-3">
+                                <div class="contact-field">
+                                    <span class="contact-field-title">Nome<span class="global-color"> *</span></span>
+                                    <input class="contact-field-input" formControlName="name" type="text">
+                                    <span class="contact-focus-input"></span>
+                                </div>
+                            </div>
+    
+                            <div class="col-6 pl-3">
+                                <div class="contact-field">
+                                    <span class="contact-field-title">Email<span class="global-color"> *</span></span>
+                                    <input class="contact-field-input" formControlName="email" type="text">
+                                    <span class="contact-focus-input"></span>
+                                </div>
+                            </div>
+    
+                            <div class="col-6 pr-3">
+                                <div class="contact-field">
+                                    <span class="contact-field-title">Assunto<span class="global-color"> *</span></span>
+                                    <input class="contact-field-input" formControlName="subject" type="text">
+                                    <span class="contact-focus-input"></span>
+                                </div>
+                            </div>
+    
+                            <div class="col-6 pl-3">
+                                <div class="contact-field">
+                                    <span class="contact-field-title">Telemóvel</span>
+                                    <input class="contact-field-input" formControlName="phone" type="text">
+                                    <span class="contact-focus-input"></span>
+                                </div>
+                            </div>
+    
+                            <div class="col-12 pl-3 pr-3">
+                                <div class="contact-field">
+                                    <span class="contact-field-title">Mensagem<span class="global-color"> *</span></span>
+                                    <textarea class="contact-field-input" formControlName="message" type="text"></textarea>
+                                    <span class="contact-focus-input"></span>
+                                </div>
+                            </div>
+                            <div class="contact-container-btn">
+                                <re-captcha (resolved)="resolvedCaptcha($event)" siteKey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></re-captcha>
+                            </div>
+
+                            <div class="contact-container-btn">
+                                <button class="btn contact-btn" (click)="onSend()">
+                                    <span>Contactar</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-2 col-sm-0"></div>
+            </div>
+            <div class="col-md-1 col-sm-0"></div>
+        </div>
+    </div>
+</div>

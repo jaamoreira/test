@@ -1,0 +1,69 @@
+<!-- Loader Begin -->
+<div class="loader" id="loader">
+  <div class="loader-position"><img class="loader-img" src="assets/img/massilLogo.png" alt=""></div>
+  <div class="loader-ring">
+  </div>
+</div>
+<!-- Loader End -->
+
+<div class="site-body">
+  <nav class="navbar navbar-expand-md navbar-dark" [ngClass]="{'customfixed': route !== '/inicio'}">
+    <div class="container">
+      <a href="#" class="navbar-brand">
+        <img class="loader-img" src="assets/img/massilLogo.png" alt="">
+      </a>
+      
+      <button type="button" class="navbar-toggler-button collapsed" data-toggle="collapse" data-target="#main-nav">
+        <span class="menu-icon-bar"></span>
+        <span class="menu-icon-bar"></span>
+        <span class="menu-icon-bar"></span>
+      </button>
+      
+      <div id="main-nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li><a class="nav-item nav-link" routerLink="">Home</a></li>
+          <li><a class="nav-item nav-link" routerLink="/sobre">Sobre</a></li>
+          <li><a class="nav-item nav-link" routerLink="/produtos">Produtos</a></li>
+          <li><a class="nav-item nav-link" routerLink="/galeria">Galeria</a></li>
+          <li><a class="nav-item nav-link" routerLink="/contactos">Contactos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <router-outlet></router-outlet>
+
+  <!-- Footer -->
+  <section class="footer-section">
+    <div class="container">
+      <div class="w-100 flex-column">
+        <div class="col-12 d-flex">
+          <div class="col-3"></div>
+          <div class="col-2 d-flex justify-content-center align-items-center">
+              <!-- <a routerLink="/inicio"><img class="footer-icon" src="assets/img/facebook.svg" alt=""></a> -->
+          </div>
+          <div class="col-2 d-flex justify-content-center align-items-center">
+              <a routerLink="/inicio"><img class="footer-icon" src="assets/img/linkedin.svg" alt=""></a>
+              <a routerLink="/inicio"><img class="footer-icon" src="assets/img/facebook.svg" alt=""></a>
+              <a routerLink="/inicio"><img class="footer-icon" src="assets/img/linkedin.svg" alt=""></a>
+          </div>
+          <div class="col-2 d-flex justify-content-center align-items-center">
+              <!-- <a routerLink="/inicio"><img class="footer-icon" src="assets/img/facebook.svg" alt=""></a> -->
+          </div>
+          <div class="col-3"></div>
+        </div>
+        <hr class="footer-divider mt-4">
+        <div class="col-12 footer-content-link">
+          <a class="footer-link" routerLink="">Home</a>
+          <a class="footer-link" routerLink="/sobre">Sobre</a>
+          <a class="footer-link" routerLink="/produtos">Produtos</a>
+          <a class="footer-link" routerLink="/galeria">Galeria</a>
+          <a class="footer-link" routerLink="/contactos">Contactos</a>
+          <!-- <a class="mr-4 footer-text" routerLink="/inicio">SiteMap</a> -->
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
